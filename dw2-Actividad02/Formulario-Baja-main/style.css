@@ -210,6 +210,8 @@ body, html
     position: relative;
     top: 50px;
     font-size: 13px;
+    /*aca se añade el color de los textos dentro del formulario alta*/
+    color: white;
 }
 
 .alta *
@@ -217,9 +219,16 @@ body, html
     margin: 1px;
     margin-left: 2px;
 
-    /*aca se añade el color de los textos dentro del formulario alta*/
-    color: white;
+    
 }
+
+/*este form select sirve para que el combobox del registro y del form de actualizacion esten en negro*/
+.form-select {
+    color: black;
+}
+
+
+
 
 #data
 {
