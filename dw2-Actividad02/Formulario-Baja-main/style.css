@@ -1,0 +1,450 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+body, html
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: auto;
+    font-family: 'Poppins', 'Arial Narrow', Arial, sans-serif;
+    font-size: 16px;
+    max-height: 100vh;
+    height: 100vh;
+    background-image: linear-gradient(to right top, #302387, #36359d, #3a46b3, #3e58c9, #406ae0, #4d76ea, #5981f3, #658dfd, #7995fc, #8a9dfb, #98a5fa, #a6aef9);
+}
+
+/*
+    CAMBIOS REALIZADOS:
+        - cambio de color a Azul
+        - Cambio de logos a logos relacionados con la UPDS
+        - Cambio de texto principal a '¡Bienvenido al sistema de registro <br> de baja de la Universidad Privada Domingo Sabio!'
+        - Cambio de forma a los botones del formulario inicial
+        - cambio de color a los botones por un azul del formulario inicial
+
+        Frm Registrar:
+        - Cambio de posicion del cuadro de color del formulario
+        - Cambio de color a las letras por 'Blanco'
+        - Cambio de color del fondo por un azul oscuro
+        - Cambio de posicion de la imagen a la derecha
+
+        Frm Eliminar:
+        - Cambio de color a los botones(azul) como a las letras(blanco)
+
+        Frm Buscar:
+        - Cambio de color a los botones(azul) como a las letras(blanco)
+
+        Frm Actualizar:
+        - Cambio de color a los botones(azul) como a las letras(blanco)
+
+            - Frm Actualizar interior:
+            - Cambio de posicion del cuadro de color del formulario(por un azul oscuro)
+            - Cambio de color a las letras por 'Blanco'
+            - Cambio de color del fondo por un azul oscuro
+            - Cambio de posicion de la imagen a la derecha
+            - cambio de color a los botones(por un azul)
+
+        Frm Reporte:
+        - Ajuste del listado de los registros
+        - cambio de color a los botones(por uno azul).
+*/
+
+
+
+.header
+{
+    display: flex;
+}
+
+
+.logo {
+    text-align: center; /* Centra el contenido horizontalmente */
+    
+}
+
+.logo img {
+    max-width: 50%;
+    height: auto;
+    margin-left: 480px;
+
+}
+
+/*titulo de UPDS*/
+.divTitulo
+{
+    position: relative;
+    /*left: 100px;*/
+    left: -1400px;
+    color: whitesmoke;
+    
+}
+
+/*propiedades de titulo UPDS*/
+#titulo
+{
+    font-weight: 900;
+    
+    position: relative;
+    top: 26px;
+    justify-content: center;
+    
+}
+
+.nombre
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-top: 15px;
+    left: 70px;
+    background-color: #0b55c4;
+    border-color: #0b55c4;
+    border-radius: 20px;
+    height: 35px;
+    width: 197px;
+    top: 25px;
+}
+
+#clickNombre
+{
+    text-decoration: none;
+}
+
+#nombreReal
+{
+    color: white;
+    position: relative;
+    left: -7px;
+}
+
+#imagenNombre
+{
+    position: relative;
+    left: -24px;
+}
+
+.imagen
+{
+    background-image: url("./imgs/imagenFondo.jpg");
+    background-position: center center;
+    background-size: 100% auto; /* Ajustar al ancho y alargar automáticamente */
+    height: 431px;
+    width: 100%;
+    filter: brightness(0.9); /* Reducir el brillo a la mitad (0 es completamente oscuro, 1 es normal) */
+}
+
+/*para darle mas reduccion de brillo*/
+.imagen::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Color negro con opacidad del 50% */
+}
+
+/*
+    - texto principal de bienvenida al abrir el proyecto
+*/
+.imagen h1 
+{
+    position: relative;
+    left: 10px;
+    top: 250px;
+    font-weight: 700;
+    color: whitesmoke;
+    z-index: 1; /* Asegura que el texto esté por encima del fondo semi-transparente */
+}
+
+.opciones
+{
+    display: flex;
+    height: 200px;
+}
+
+.opciones > div
+{
+    height: 100px;
+    margin: 15px;
+    text-align: center;
+    width: 300px;
+}
+
+/*opciones de botones del menu principal*/
+.opciones button
+{
+    margin-top: 15px;
+    background-color: #0b55c4;
+    border-color: #0b55c4;
+    position: relative;
+    left: -3px;
+}
+
+.tablita
+{
+    position: relative;
+    top: 100px;
+}
+
+/*boton del form reporte, boton regresar al menu*/
+#botonMenuReporte
+{
+    position: relative;
+    left: 1240px;
+    top: 20px;
+    background-color: #0b55c4;
+    border-color: #0b55c4;
+}
+
+.comentarios
+{
+    position: absolute;
+    top: 70px;
+    left: 435px;
+}
+
+.alta
+{
+    position: relative;
+    top: 50px;
+    font-size: 13px;
+}
+
+.alta *
+{
+    margin: 1px;
+    margin-left: 2px;
+
+    /*aca se añade el color de los textos dentro del formulario alta*/
+    color: white;
+}
+
+#data
+{
+    background-color: rgb(29, 56, 143);
+    width: 1100px;
+    
+    height: 820px;
+}
+
+
+/*fondo del form actualizar */
+#dataAct
+{
+    /*esto esta antes
+    background-color: #0b55c4;
+    */
+
+    background-color: rgb(29, 56, 143);
+    
+    width: 1100px;
+    height: 820px;
+}
+
+/*
+    - botones del form Actualizar
+*/
+#dataAct button
+{
+    background-color: #0b55c4;
+    color: white;
+}
+
+#imagenFormulario
+{
+    background-image: url("./imgs/fondoFormulario2.jpeg");
+    width: 507px;
+    position: relative;
+    bottom: 722px;
+    height: 1000px;
+    left: 1100px;
+    top: -890px;
+}
+
+#imagenFormularioAct
+{
+    background-image: url("./imgs/fondoActualizar2.png");
+    width: 507px;
+    position: relative;
+    bottom: 722px;
+    height: 1000px;
+    left: 1100px;
+    top: -890px;
+}
+
+
+/*
+    - 1er form de alta
+    - botones de mostrar comentarios y esconder comentarios
+*/
+#show,#hide
+{
+    position: relative;
+    left: 420px;
+    bottom: 690px;
+    background-color: #0b55c4;
+    border-color: #0b55c4;
+}
+
+/*
+    - 4to form de actualizar
+    - botones de mostrar comentarios y esconder comentarios
+*/
+#showAct,#hideAct
+{
+    position: relative;
+    left: 420px;
+    bottom: 690px;
+    background-color: #0b55c4;
+    border-color: #0b55c4;
+}
+
+#botonEnviar, #botonRegresar
+{
+    position: relative;
+    left: 550px;
+    bottom: 80px;
+    background-color: #0b55c4;
+    border-color: #0b55c4;
+}
+
+#menuBaja
+{
+    background-image: url("imgs/fondoBorrar.jpeg");
+    position: relative;
+    top: 80px;
+    left: 240px;
+    height: 478px;
+    width: 850px;
+    text-align: center;
+    font-family: 'Poppins', 'Arial Narrow', Arial, sans-serif;
+}
+
+#dataBaja
+{
+    position: relative;
+    left: 200px;
+    top: 150px;
+    color: white;
+}
+
+#dataBaja input
+{
+    position: relative;
+    left: 320px;
+    top: 10px;
+}
+
+#dataBaja button
+{
+    background-color: #0b55c4;
+    border-color: #0b55c4;
+    margin: 10px;
+}
+
+#imagenBuscar
+{
+    position: relative;
+    top: 50px;
+    background-image: url("imgs/fondoBuscar.jpg");
+    height: 250px;
+    width: 1295px;
+}
+
+#camposBuscar
+{
+    position: relative;
+    left: 485px;
+    top: 50px;
+}
+
+#camposBuscar * 
+{
+    margin: 10px;
+}
+
+#imagenBuscar button
+{
+    background-color: #0b55c4;
+    border-color: #0b55c4;
+    margin: 10px;
+}
+
+#botonRegresarBuscar
+{
+    position: relative;
+    left: 47px;
+}
+
+#dataBuscar
+{
+    position: relative;
+    top: 50px;
+}
+
+
+/*
+    - 4to formulario de actulizar
+    - primer formulario de botones 'actulizar baja' y 'regresar menu'
+*/
+#dataActualizar button
+{
+    background-color: #0b55c4;
+    border-color: #0b55c4;
+    margin: 10px;
+    color: white;
+}
+
+#menuActualizar
+{
+    background-image: url("imgs/fondoActualizar.jpeg");
+    position: relative;
+    top: 80px;
+    left: 240px;
+    height: 478px;
+    width: 800px;
+    text-align: center;
+    font-family: 'Poppins', 'Arial Narrow', Arial, sans-serif;
+}
+
+#dataActualizar h2
+{
+    position: relative;
+    color: black;
+}
+
+#dataActualizar
+{
+    position: relative;
+    left: 0px;
+    top: 150px;
+    color: white;
+}
+
+#dataActualizar input
+{
+    position: relative;
+    left: 320px;
+    top: 10px;
+}
+
+#botonRegresarActualizar, #botonEnviarActualizar
+{
+    position: relative;
+    bottom: 80px;
+    left: 485px;
+    background-color: #0b55c4;
+    border-color: #0b55c4;
+}
+
+
+
+
+
+
+
+
+
+
