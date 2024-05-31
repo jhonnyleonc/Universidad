@@ -1,0 +1,46 @@
+version: '3.1'
+
+services:
+  wordpress:
+    image: wordpress:latest
+    restart: always
+    ports:
+      - "80:80"    
+      - "443:443" 
+    environment:
+      WORDPRESS_DB_HOST: wordpress_db:3306
+      WORDPRESS_DB_USER: leo
+      WORDPRESS_DB_PASSWORD: 123123
+      WORDPRESS_DB_NAME: wp_db
+    volumes:
+      - ./wp:/var/www/html
+    depends_on:
+      - wordpress_db
+
+  wordpress_db:
+    image: mariadb:latest
+    restart: always
+    environment:
+      MYSQL_DATABASE: wp_db
+      MYSQL_USER: eduar
+      MYSQL_PASSWORD: 123123
+      MYSQL_ROOT_PASSWORD: 123123
+    volumes:
+      - db:/var/lib/mysql
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:latest
+    restart: always
+    ports:
+      - "8080:80" 
+
+    environment:
+      PMA_HOST: wordpress_db
+      PMA_USER: root
+      PMA_PASSWORD: 123123
+    depends_on:
+      - wordpress_db
+
+volumes:
+  wordpress:
+  db:
